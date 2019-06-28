@@ -1,0 +1,18 @@
+Files to handle:
+1)index.html
+2)second.php
+3)history.php
+
+Changes:
+
+1)index.php
+->the alignment of table.
+2)second.php
+->left side video addition.
+->symbol addition
+->widget addition
+3)history.php
+->all background settings including menu bar and side nav bar.
+->table css change.
+->symbol addition
+->widget addition

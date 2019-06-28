@@ -1,0 +1,723 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Waterwheel Carousel Plugin Demo</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <!-- <script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style type="text/css">
+#pop1{
+    display: none;
+}
+#pop2{
+    display: none;
+}
+li{
+list-style:none;
+}
+
+
+.box {
+    float: left;
+    background: #eff0f4;
+    display: none;
+    width: 200px;
+    padding: 0 42px;
+    position: absolute;
+    z-index: -1;
+}
+
+        .box-inner {
+            width: 318px;
+            padding: 10px;
+        }
+
+        .box-inner ul li {
+            padding-bottom: 13px;
+        }
+
+        .box-inner ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .box-inner ul li a img {
+            width: 100px;
+
+        }
+.ktrv {
+    width: 100%;
+   /* border: 1px solid #222;*/
+    height: 340px;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+   background: transparent !important;
+    margin: 132px auto;
+	    max-width: 700px;
+}
+    .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*        .wwkt img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+
+    }*/
+
+.ktrv>div.wwkt>div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: inherit;
+    display: table;
+    background-color: #fff;
+    border-radius: 5px;
+}
+    .ktrv>div.wwkt>div:last-child {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+    .ktrv > div.wwkt > div:first-child {
+
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+
+}
+h2 {
+    display: table-cell;
+    vertical-align: middle;
+    /* height: inherit; */
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+}
+    #callback-output {
+        height: 250px;
+        overflow: scroll;
+    }
+.ktrv>div.wwkt {
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 5px #999;
+}
+    </style>
+</head>
+
+<body>
+<div class="top_secc">
+	<div class="bar_secc">
+		<div class="blockkk">
+		    <div class="icon_secc">
+			<div class="dgdg">
+			<a href="#" class="mnu_sctn">Menu</a>
+			 <div class="hdnnd">
+			<img src="img/shape3.png">
+			<ul class="three_icns">
+				<li><a href=""><img src="img/notification2.png"></a></li>
+				<li><a href=""><img src="img/user4.png"></a></li>
+				<li><a href=""><img src="img/arrow1.png"></a></li>
+			</ul>
+			</div>
+			</div>
+		   
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sidebar-wrapper" style="float: left;width:100%">
+	<div class="row add_wdth">
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding:0;">
+				<!----------------sidebar-------------------->
+			<div class="sidebar-main" style="position: relative;">
+			
+				<div class="maz-toggle">
+					<span id="bar"><i class="fas fa-bars slide-toggle "></i></span>
+				</div>
+				<div class="ghfgh" style="margin-top: -4px;">
+
+	<div class="watchlist-h">
+	<h4>Portfolio</h4>
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no-g">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="  color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+
+	</div>
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no-g">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="  color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+
+	</div>
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href=""><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no-g">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+
+		<div class="watch-btn">
+	<button id="but_lft" class="left_bare"><img src="img/eyes-left.png" height="120px"></button>
+	</div>
+
+	</div>
+			<div class="box">
+				<div class="box-inner">
+					<ul class="">
+						<li>
+						    <div class="icn_nd_txt"><a href="index.html"><img src="img/1.png" alt=""></a>
+						    <div class="icn_open_txt"><p>Stock Watch</p></div>
+						    </div>
+						</li>
+						<li>
+						    <div class="icn_nd_txt"><a href="second.html"><img src="img/2.png" alt=""></a>
+						    <div class="icn_open_txt"><p>Trade now</p></div>
+						    </div>
+						</li>
+						<li>
+						    <div class="icn_nd_txt"><a href="table.html"><img src="img/33.png" alt=""></a>
+						    <div class="icn_open_txt"><p>Transaction history</p></div>
+						    </div>
+						</li>
+						<li>
+						    <div class="icn_nd_txt"><a href="table2.html"><img src="img/4.png" alt=""></a>
+						    <div class="icn_open_txt"><p>Portfolio</p></div>
+						    </div>
+						</li>
+						<li>
+						    <div class="icn_nd_txt"><a href="#"><img src="img/5.png" alt=""></a>
+						    <div class="icn_open_txt"><p>Help</p></div>
+						    </div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		
+			</div>
+		</div>
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div class="ktrv">
+			<div class="serah_bar">
+				<form class="Form_input">
+					<input type="text" name="search" placeholder="Search..">
+				</form>
+				<div class="form_sev_sec">
+					<ul>
+						<li><a href="#" id="sellpop1">sell</a></li>
+						<li><a id="buypop1">buy</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 gfhfgh">
+	<div class="side-watchlist">
+	
+	<div class="watchlist-h">
+	<h4>watchlist</h4>
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no-g">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="  color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+
+	</div>
+
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no-g">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="  color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+
+	</div>
+
+
+	<div class="watchlist-list">
+	<div class="cross"><a href="#"><i class="fas fa-times"></i></a></div>
+	<ul class="list-inline">
+	<li>EUR</li>
+	<li>12,30</li>
+	<li class="color w-no-g">2500</li>
+	<li><a href="#"></a></li>
+	</ul>
+	</div>
+		<div class="watch-btn">
+	<button id="but" class="no_lne"><img src="img/eyes.png" height="120px"></button>
+	</div>
+
+
+
+	</div>
+	</div>
+	
+	</div>
+	
+	
+	</div>
+
+<div class="row">
+<div class="logo">
+<img src="img/logo.png" alt="">
+</div>
+</div>
+
+
+<div class="pop_upp" id="pop1">
+	<div class="hlf_pp">
+		<div class="row add_bg">
+			<div class="col-md-11">
+				<div class="logo_txt_hdng">
+					<span class="lg_logo">
+						<img src="img/logo.png">
+					</span>
+					<span class="logo_hd">TORO</span>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<span class="cross_bt" id="cross_bt"><i class="fa fa-times"></i></span>
+			</div>
+		</div>
+		<div class="row white_bg">
+			<div class="col-md-12">
+				<div class="hd_wht">
+					<h2>Prince Changing (% changing) Volume</h2>
+				</div>
+				<div class="row mg_top">
+					<div class="col-md-2">
+						<span class="lbl_sp">Quantity</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="Quantity">
+					</div>
+					<div class="col-md-2">
+						<span class="lbl_sp">Prices</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="Prices">
+					</div>
+					<div class="col-md-2">
+						<span class="lbl_sp">.</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="xx">
+					</div>
+					<div class="col-md-2">
+						<span class="es_equal">=</span>
+					</div>
+					<div class="col-md-2">
+						<span class="lbl_sp">Amount</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="Amount">
+					</div>
+					<div class="col-md-2">
+						<span class="lbl_sp">Order</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="Order">
+					</div>
+					<div class="col-md-2 sp_top">
+						<span class="lbl_sp">Traget</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="Traget">
+					</div>
+					<div class="col-md-2 sp_top">
+						<span class="lbl_sp">Stop</span>
+							</br>
+						<input class="left_sp" type="text" placeholder="Stop">
+					</div>
+					<div class="col-md-8 sp_top">
+						<span class="TradiNg_ScT">
+							Trading Stock:
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="pop_upp" id="pop2">
+	<div class="hlf_tble_pp">
+	    <span class="cross_bt_post" id="cross_bt_post"><i class="fa fa-times"></i></span>
+		<div class="row">
+			<div class="col-md-12" style="z-index: 99999;">
+				<div style="overflow-x:auto;">
+				  <table>
+					<tbody><tr class="toP_bg_tAbLe">
+					  <th style="padding-right: 52px;">Company</th>
+					  <th>Current Price<br>/Change</th>
+					  <th>Quantily <br> Buy/Sell</th>
+					  <th>Investment <br> Average</th>
+					  <th>Day's Gain % <br> Gain</th>
+					  <th>Overall Gain % <br> Gain</th>
+					  <th>Lastedt Value</th>
+					  <th>Buy/Sell</th>
+					</tr>
+					<tr class="chk_bx_area">
+					  <td style="padding-right: 20px;text-align: left;">
+						<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+						<span class="chk_txt">Vedanta(1100)</span>
+					  </td>
+					  <td>208.85<br> <span class="rEd_TxT">+1.10</span></td>
+					  <td>1100<br>BUY</td>
+					  <td>247.757 <br> 225.23</td>
+					  <td>247.757 <br> <span class="rEd_TxT">225.23<div></div></span></td>
+					  <td>-18.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>38.757</td>
+					  <td><a href="#" class="bUy_sl">Buy/Sell</a></td>
+					</tr>
+					<tr class="chk_bx_area">
+					  <td style="padding-right: 20px;text-align: left;">
+						<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+						<span class="chk_txt">Vedanta(1100)</span>
+					  </td>
+					  <td>208.85<br> <span class="rEd_TxT">+1.10</span></td>
+					  <td>1100<br>BUY</td>
+					  <td>247.757 <br> 225.23</td>
+					  <td>247.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>-18.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>38.757</td>
+					  <td><a href="#" class="bUy_sl">Buy/Sell</a></td>
+					</tr>
+					<tr class="chk_bx_area">
+					  <td style="padding-right: 20px;text-align: left;">
+						<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+						<span class="chk_txt">Vedanta(1100)</span>
+					  </td>
+					  <td>208.85<br> <span class="rEd_TxT">+1.10</span></td>
+					  <td>1100<br>BUY</td>
+					  <td>247.757 <br> 225.23</td>
+					  <td>247.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>-18.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>38.757</td>
+					  <td><a href="#" class="bUy_sl">Buy/Sell</a></td>
+					</tr>
+					<tr class="chk_bx_area">
+					  <td style="padding-right: 20px;text-align: left;">
+						<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+						<span class="chk_txt">Vedanta(1100)</span>
+					  </td>
+					  <td>208.85<br> <span class="rEd_TxT">+1.10</span></td>
+					  <td>1100<br>BUY</td>
+					  <td>247.757 <br> 225.23</td>
+					  <td>247.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>-18.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>38.757</td>
+					  <td><a href="#" class="bUy_sl">Buy/Sell</a></td>
+					</tr>
+					<tr class="chk_bx_area">
+					  <td style="padding-right: 20px;text-align: left;">
+						<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+						<span class="chk_txt">Vedanta(1100)</span>
+					  </td>
+					  <td>208.85<br> <span class="rEd_TxT">+1.10</span></td>
+					  <td>1100<br>BUY</td>
+					  <td>247.757 <br> 225.23</td>
+					  <td>247.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>-18.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>38.757</td>
+					  <td><a href="#" class="bUy_sl">Buy/Sell</a></td>
+					</tr>
+					<tr class="chk_bx_area">
+					  <td style="padding-right: 20px;text-align: left;">
+						<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+						<span class="chk_txt">Vedanta(1100)</span>
+					  </td>
+					  <td>208.85<br> <span class="rEd_TxT">+1.10</span></td>
+					  <td>1100<br>BUY</td>
+					  <td>247.757 <br> 225.23</td>
+					  <td>247.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>-18.757 <br> <span class="rEd_TxT">225.23</span></td>
+					  <td>38.757</td>
+					  <td><a href="#" class="bUy_sl">Buy/Sell</a></td>
+					</tr>
+				  </tbody></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
+
+
+<a href="{{data.url}}">
+     </a>
+     <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+   <script>
+        $(document).ready(function() {
+            $(".slide-toggle").click(function() {
+                $(".box").animate({
+                    width: "toggle"
+                });
+              
+            });
+        });
+
+    </script>
+	<script>
+$(document).ready(function(){
+    $(".slide-toggle").click(function(){
+        $(".form_sece").toggleClass( "intro" );
+    });
+});
+</script>
+
+		<script>
+$(document).ready(function(){
+    $(".slide-toggle").click(function(){
+        $(".ghfgh").toggleClass( "vkkk" );
+    });
+});
+</script>
+	<script>
+$(document).ready(function(){
+ jQuery('#but').click(function() {
+ 
+  $('.side-watchlist').toggleClass('cli');
+    /*  event.preventDefault();
+     /jQuery('.side-watchlist').animate({
+      //  marginLeft: "+=300px"
+      //}, "slow");
+	  $('.side-watchlist').addClass('cli');
+	  alert('ggfg');
+	  */
+   });
+   
+   $(document).ready(function(){
+ jQuery('#but_lft').click(function() {
+ 
+  $('.ghfgh').toggleClass('cli2');
+   });
+   })
+   
+   
+   $("#sellpop1").click(function(){
+       $(this).attr("href", "#pop1");
+       $("#pop1").css({"display":"block"});
+     
+   });
+   $("#cross_bt").click(function(){
+       $("#pop1").css({"display":"none"});
+       $("#sellpop1").attr("href", "#");
+   });
+   
+   
+  $("#buypop1").click(function(){
+     //alert("rrr");
+      // $(this).attr("href", "#pop2");
+       $("#pop1").css({"display":"block"});
+     
+   });
+$("#cross_bt_post").click(function(){
+    //if($("#pop2").css('display') !== 'none'){
+        $("#pop2").css({"display":"none"});
+       // alert("pop 2 is showing");
+    //}
+});
+   
+   });
+</script>
+
+<style>
+.cli{
+	margin-left: 300px;
+}
+.cli2{
+	margin-left: -353px;
+}
+.left_bare {
+    position: absolute;
+    top: 170px;
+    /* left: 50%; */
+    background: transparent;
+    padding: 4px 0px;
+    border: none;
+    font-family: arial;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: arial;
+    color: #999;
+}
+.ghfgh {
+    margin-top: -4px;
+    background: #fff;
+    float: left;
+    width: 100%;
+
+}
+.vkkk {
+    display: none;
+}
+.watch-btn {
+    position: relative;
+    z-index: 111;
+}
+</style>
+
